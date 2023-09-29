@@ -10,8 +10,15 @@ fn main() {
 // create a component that renders a div with the text "Hello, world!"
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
-        div {
-            "Hello, world!"
-        }
+        h1 { "Hello Dioxus world!" }
+        h4 { "My first heading alright??" }
+        footer { class: "info",
+        br {}
+        hr {}
+        p { "Created by ", a {  href: "https://umuv.world", target: "_blank", "Olsi Gjeci" }}
+        p { "With ", a { href: "https://dioxuslabs.com/", "Dioxus" }}
+        hr {}
+        button {class: "btn", "Dioxus"}
+    }
     })
 }

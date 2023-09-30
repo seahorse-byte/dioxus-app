@@ -21,6 +21,11 @@ fn App(cx: Scope) -> Element {
             p { "With ", a { href: "https://dioxuslabs.com/", target: "_blank", "Dioxus" }}
             hr {}
             hr {}
+            img {
+                src: "https://avatars.githubusercontent.com/u/75344745?v=4",            
+                class: "rounded-full h-20 w-20 border-2 border-white py-6 ",
+                width: "100px"
+            }
             button {class: "bg-slate-900 text-white cursor-pointer font-bold p-2 px-4 mt-10 rounded-full", "Dioxus"}
         }   
     })

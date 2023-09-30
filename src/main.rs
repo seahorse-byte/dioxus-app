@@ -9,6 +9,9 @@ fn main() {
 
 // create a component that renders a div with the text "Hello, world!"
 fn App(cx: Scope) -> Element {
+
+    let mut count = use_state(cx, || 0);
+
     cx.render(rsx! {
         div { 
             class: "flex flex-col items-center justify-center h-screen p-20 text-slate-800 bg-teal-500",
@@ -23,6 +26,13 @@ fn App(cx: Scope) -> Element {
                 width: "100px"
             }
             button {class: "bg-slate-900 text-white cursor-pointer font-bold p-2 px-4 mt-10 rounded-full", "Dioxus"}
+            button {
+                onclick: move |_| { count += 1 },
+                class: "bg-slate-900 text-white cursor-pointer font-bold p-2 px-4 mt-10 rounded-full", 
+                "Star me"}
+                
+            br {}
+            p { "⭐ {count}" }
         }   
     })
 }

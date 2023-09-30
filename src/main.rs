@@ -13,17 +13,13 @@ fn App(cx: Scope) -> Element {
         div { 
             class: "flex flex-col items-center justify-center h-screen p-20 text-slate-800 bg-teal-500",
             h1 { class: "text-white text-3xl", "Hello Dioxus world!" }
-            h4 { "My first heading alright??" }
-            footer { class: "info"}
-            br {}
-            hr {}
             p { "Created by ", a {  href: "https://umuv.world", target: "_blank", "Olsi Gjeci" }}
-            p { "With ", a { href: "https://dioxuslabs.com/", target: "_blank", "Dioxus" }}
-            hr {}
-            hr {}
+            p { "w/ ", a {class: "font-bold cursor-pointer underline", href: "https://dioxuslabs.com/", target: "_blank", "Dioxus" }}
+            br {}
+            br {}
             img {
                 src: "https://avatars.githubusercontent.com/u/75344745?v=4",            
-                class: "rounded-full h-20 w-20 border-2 border-white py-6 ",
+                class: "rounded-full border-2 border-white",
                 width: "100px"
             }
             button {class: "bg-slate-900 text-white cursor-pointer font-bold p-2 px-4 mt-10 rounded-full", "Dioxus"}
